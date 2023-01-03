@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 15px;
+  max-width: 400px;
+  background-color: rgba(217, 216, 234, 0.9);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.list {
+  width: 100%;
+}
+
+.number {
+  font-size: large;
+}
+
+.text {
+  font-family: "Roboto";
+  font-size: larger;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.complete,
+.delete {
+  margin: 0 5px;
+}
