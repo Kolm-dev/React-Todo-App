@@ -6,7 +6,12 @@
   margin-left: 50px;
   margin-top: 15px;
   max-width: 400px;
-  background-color: rgba(217, 216, 234, 0.9);
+  background: rgb(85, 205, 207);
+  background: linear-gradient(
+    80deg,
+    rgba(85, 205, 207, 0.9136029411764706) 0%,
+    rgba(253, 187, 45, 1) 91%
+  );
   border-radius: 15px;
   padding: 5px;
 }
@@ -20,13 +25,40 @@
 }
 
 .text {
-  font-family: "Roboto";
-  font-size: larger;
+  font-family: "Ubuntu";
+  font-size: medium;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
+  color: #c6ffe7;
 }
 
 .complete,
 .delete {
   margin: 0 5px;
+  cursor: pointer;
+}
+
+.message {
+  margin: 25% auto;
+  color: black;
+  text-align: center;
+  font-size: 26px;
+}
+
+.isCompletedItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 15px;
+  max-width: 400px;
+  background-color: rgba(27, 234, 89, 0.9);
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.complete {
+  pointer-events: none;
+  color: #aaa;
 }

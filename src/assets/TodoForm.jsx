@@ -1,7 +1,7 @@
 import React from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { TextField, Button } from "@mui/material";
-const TodoForm = () => {
+const TodoForm = ({ todos, setTodos, todo, setTodo }) => {
   return (
     <div className="form">
       <form autoComplete="off">
@@ -9,13 +9,26 @@ const TodoForm = () => {
           sx={{ mr: 2 }}
           id="standard-basic"
           variant="standard"
+          value={todo}
           placeholder="Какие у вас планы?.."
+          onChange={(e) => {
+            setTodo(e.target.value);
+          }}
         />
         <Button
           size="small"
           startIcon={<AddCircleIcon />}
           variant="contained"
+          color="inherit"
           type="submit"
+          onClick={(e) => {
+            setTodo("");
+
+            e.preventDefault();
+            if (todo.trim() !== "") {
+              setTodos([...todos, todo]);
+            }
+          }}
         >
           Добавить задачу
         </Button>
