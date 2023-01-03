@@ -1,5 +1,6 @@
 import React from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
+import "./styles/TodoForm.css";
 import { TextField, Button } from "@mui/material";
 const TodoForm = ({ todos, setTodos, todo, setTodo }) => {
   return (
@@ -16,6 +17,7 @@ const TodoForm = ({ todos, setTodos, todo, setTodo }) => {
           }}
         />
         <Button
+          style={{ opacity: 100 }}
           size="small"
           startIcon={<AddCircleIcon />}
           variant="contained"
